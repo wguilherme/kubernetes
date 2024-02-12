@@ -1,0 +1,22 @@
+Name:         nginx-rs
+Namespace:    default
+Selector:     env=test
+Labels:       app=nginx-rs
+Annotations:  <none>
+Replicas:     2 current / 2 desired
+Pods Status:  2 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  env=test
+  Containers:
+   nginx-container:
+    Image:        nginx
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Events:
+  Type    Reason            Age   From                   Message
+  ----    ------            ----  ----                   -------
+  Normal  SuccessfulCreate  14m   replicaset-controller  Created pod: nginx-rs-hcp6j
+  Normal  SuccessfulCreate  7m    replicaset-controller  Created pod: nginx-rs-nqpcg

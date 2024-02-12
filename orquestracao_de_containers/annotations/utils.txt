@@ -1,0 +1,6 @@
+Salvar resultado do kubectl em um arquivo local, por ex.: describe
+
+kubectl describe <resource> <resource-name> > test.yaml
+
+escalar sem mudar o arquivo
+kubectl scale replicaset nginx-rs --replicas=4
