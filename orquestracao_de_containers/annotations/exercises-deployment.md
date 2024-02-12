@@ -48,4 +48,34 @@ Pode executar com ou sem o --record:
 ```bash
 kubectl set image deployment nginx-dp nginx-container=nginx:1.17.10
 kubectl set image deployment nginx-dp nginx-container=nginx:1.17.10 --record
+# quando tem o --recored, esse comando é salvo nas anotações no deployment.
+
+# caso uma atualizações tenha sido feita de forma errada ou causado algum problema, é possível voltar para a versão anterior com o comando:
+
+kubectl rollout undo deployment/nginx-dp
+
+# voltar para uma versão específica
+
+kubectl rollout undo deployment/nginx-dp --to-revision=1
+
+```
+
+
+### Exercício - Atualizando e Revertendo Deployments
+
+error de ImagePullBackOff: Quando a imagem não é encontrada no repositório, o kubernetes tenta baixar a imagem e não consegue, então o pod fica em estado de erro.
+
+Nesse caso, podemos executar um rollback para a versão anterior, ou corrigir a imagem no arquivo deployment.yaml e aplicar novamente.
+
+```bash
+kubectl rollout status deployment/nginx-dp
+kubectl rollout history deployment/nginx-dp
+kubectl rollout undo deployment/nginx-dp
+kubectl rollout undo deployment/nginx-dp --to-revision=X
+```
+
+Aumentar escalabilidade do deployment:
+
+```bash
+kubectl scale deployment nginx-dp --replicas=10
 ```
