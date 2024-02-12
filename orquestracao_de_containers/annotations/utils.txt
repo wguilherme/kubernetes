@@ -4,3 +4,11 @@ kubectl describe <resource> <resource-name> > test.yaml
 
 escalar sem mudar o arquivo
 kubectl scale replicaset nginx-rs --replicas=4
+
+comando pra listar todos resources
+
+kubectl get all
+
+describe by selector
+
+kubectl describe deployments --selector=app=nginx-dp

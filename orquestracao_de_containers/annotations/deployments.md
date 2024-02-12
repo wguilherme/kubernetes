@@ -1,5 +1,10 @@
 ## Deployments
 
+### Annotations
+- A deployment generate a ReplicaSet, which in turn generates the Pods. So, when you create a deployment, you are creating:
+  - A ReplicaSet
+  - N Pods (N is the number of replicas you set in the deployment)
+
 ### Resume
 
 - A Deployment is a higher-level API object that manages ReplicaSets and provides declarative updates to Pods along with a lot of other useful features.
