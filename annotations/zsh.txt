@@ -1,0 +1,23 @@
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+zsh --version
+cat ~/.zshrc
+
+
+download dracula theme
+git clone https://github.com/dracula/zsh.git ~/.oh-my-zsh/custom/themes/dracula
+
+instala alguns plugins que necessitam ser instalados manualmente
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions  
+git clone https://github.com/jonmosco/kube-ps1.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+meu gist: https://gist.github.com/wguilherme/a6d616536a59c3ce638f3831c227d492
+
+
+sudo apt update
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
