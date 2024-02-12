@@ -25,6 +25,7 @@ In Kubernetes, the networking fundamentals are akin to Docker, albeit with notab
 
 - In docker, `each container` receives an IP address.
 - In Kubernetes, `each pod` receives an IP address.
+- The PODS can communicate with each other using the IP address, because they are in the same network, created by Kubernetes (Cluster Network that distributes the IP addresses to the PODS).
 
 To see the IP address of a pod, you can use the following command:
 
@@ -40,3 +41,8 @@ kubectl get pods <name> -o wide # show the ip address of each pod in key IP or I
 - **Nodes**: IP class: C - Range:  192.0.0.0 to 223.255.255.255
 
 PS: It is important to note that, with the advent of CIDR, IP addresses are no longer rigidly assigned to fixed classes, and subnet prefixes can be used flexibly to allocate IP addresses in a more efficient and scalable manner.
+
+
+- Network Kubernetes with more than one Node (different machines)
+
+
